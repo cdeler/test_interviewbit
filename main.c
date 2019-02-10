@@ -10,18 +10,21 @@ int main()
 	{
 	int i;
 	int **arr = calloc(sizeof(int *), 2);
-	arr[0] = calloc(sizeof(int), 3);
-	arr[1] = calloc(sizeof(int), 3);
+	arr[0] = calloc(sizeof(int), 2);
+	arr[1] = calloc(sizeof(int), 2);
 
-	arr[0][0] = 0;	arr[0][1] = 1;	arr[0][2] = 0;
-	arr[1][0] = 1;	arr[1][1] = 1;	arr[1][2] = 1;
+	arr[0][0] = 0;	arr[0][1] = 1;
+	arr[1][0] = 0;	arr[1][1] = 1;
 
-	setZeroes(arr, 2, 3);
+	setZeroes(arr, 2, 2);
 
 	for (i = 0; i < 2; ++i)
 		{
-		print_arr(arr[i], 3);
+		print_arr(arr[i], 2);
+		free(arr[i]);
 		}
+
+	free(arr);
 
 	return 0;
 	}
