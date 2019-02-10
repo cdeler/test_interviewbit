@@ -3,7 +3,7 @@ PROJECT(test_01 C)
 
 SET(CMAKE_C_STANDARD 11)
 
-ADD_LIBRARY(test test.h test_01 test_02 test_04.c test_05.c test_06.c test_07.c test_08.c test_09.c test_10.c)
+ADD_LIBRARY(test test.h test_01 test_02 test_04.c test_05.c test_06.c test_07.c test_08.c test_09.c test_10.c test_11.c)
 
 ADD_EXECUTABLE(test_binary main)
 TARGET_LINK_LIBRARIES(test_binary test m)

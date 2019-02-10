@@ -8,9 +8,9 @@ static void print_arr(const int *p1, size_t n1);
 
 int main()
 	{
-	int A = 2l << 25;
+	int A = 9247;
 
-	printf("%d\n", isPower(A));
+	printf("trailingZeroes(%d), expected 2307\n", trailingZeroes(A));
 
 
 	return 0;

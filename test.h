@@ -34,5 +34,6 @@ void print_intervals(const interval *is, int isSize);
 
 int isPower(int A);
 
+int trailingZeroes(int A);
 
 #endif //TEST_01_TEST_H
