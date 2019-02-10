@@ -15,4 +15,6 @@ int *plusOne(int *A, int n1, int *len1);
 
 void nextPermutation(int *A, int n1);
 
+void setZeroes(int **A, int n11, int n12);
+
 #endif //TEST_01_TEST_H

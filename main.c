@@ -8,24 +8,21 @@ static void print_arr(const int *p1, size_t n1);
 
 int main()
 	{
-	int arr[] = {251, 844, 767, 778, 658, 337, 10, 252, 632, 262, 707, 506, 701, 475, 410, 696, 631, 903, 516, 149, 344,
-	             101, 42, 891, 991};
-	const int arrSize = sizeof(arr) / sizeof(int);
-	printf("Before:\t");
-	print_arr(arr, arrSize);
-	printf("\nAfter:\t");
+	int i;
+	int **arr = calloc(sizeof(int *), 2);
+	arr[0] = calloc(sizeof(int), 3);
+	arr[1] = calloc(sizeof(int), 3);
 
-	nextPermutation(arr, arrSize);
+	arr[0][0] = 0;	arr[0][1] = 1;	arr[0][2] = 0;
+	arr[1][0] = 1;	arr[1][1] = 1;	arr[1][2] = 1;
 
-	print_arr(arr, arrSize);
+	setZeroes(arr, 2, 3);
 
+	for (i = 0; i < 2; ++i)
+		{
+		print_arr(arr[i], 3);
+		}
 
-	int expected[] = {
-			251, 844, 767, 778, 658, 337, 10, 252, 632, 262, 707, 506, 701, 475, 410, 696, 631, 903, 516, 149, 344, 101,
-			42, 991, 891,};
-	printf("\nExp:\t");
-
-	print_arr(expected, arrSize);
 	return 0;
 	}
 
@@ -40,7 +37,7 @@ static void print_arr(const int *p1, size_t n1)
 		printf("%d", p1[i]);
 		}
 
-	printf("]");
+	printf("]\n");
 	}
 
 
