@@ -40,7 +40,7 @@
  *
  * @Output Integer array. You need to malloc memory, and fill the length in len1
  */
-int *repeatedNumber(const int *A, int n1, int *len1)
+int *repeatedNumber_copy(const int *A, int n1, int *len1)
 	{
 	int64_t X, Y, nA, nB, i, sAct, s1N, sAct2, s1N2;
 	int *result;

@@ -7,6 +7,8 @@
 #include <string.h>
 #include <stdlib.h>
 
+#include "test.h"
+
 #define PLACEHOLDER (-1)
 #define NEUTRAL (0)
 
