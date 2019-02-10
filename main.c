@@ -8,9 +8,9 @@ static void print_arr(const int *p1, size_t n1);
 
 int main()
 	{
-	int A = 9247;
+	char *s = "ZZZ";
 
-	printf("trailingZeroes(%d), expected 2307\n", trailingZeroes(A));
+	printf("titleToNumber(\"%s\"), is %d\n", s, titleToNumber(s));
 
 
 	return 0;

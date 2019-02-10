@@ -28,12 +28,17 @@ struct Interval
 };
 
 typedef struct Interval interval;
+
 interval *merge(interval *intervals, int sz, int *len);
+
 interval *get_intervals(const int *arr, size_t arrLen);
+
 void print_intervals(const interval *is, int isSize);
 
 int isPower(int A);
 
 int trailingZeroes(int A);
+
+int titleToNumber(char *A);
 
 #endif //TEST_01_TEST_H
