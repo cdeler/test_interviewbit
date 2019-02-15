@@ -43,4 +43,7 @@ int titleToNumber(char *A);
 
 int gcd(int A, int B);
 
+char** fizzBuzz(int A, int *len1);
+
+
 #endif //TEST_01_TEST_H

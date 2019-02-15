@@ -5,15 +5,32 @@
 #include "test.h"
 
 static void print_arr(const int *p1, size_t n1);
+static void print_str_arr(const char **arr, int len);
 
 int main()
 	{
-	int res = gcd(4, 6);
+	int ln = 0;
+	char **res = fizzBuzz(16, &ln);
 
-	printf("Result is %d\n", res);
+
+	print_str_arr(res, ln);
 
 
 	return 0;
+	}
+
+static void print_str_arr(const char **arr, int len)
+	{
+	int i;
+	printf("[");
+
+	for (i = 0; i < len; ++i)
+		{
+		printf("%s", arr[i]);
+		if (i != len - 1) printf(", ");
+		}
+
+	printf("]\n");
 	}
 
 static void print_arr(const int *p1, size_t n1)
