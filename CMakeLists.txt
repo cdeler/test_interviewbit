@@ -1,9 +1,12 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 3.13)
-PROJECT(test_01 C)
-
+PROJECT(test_interviewbit C)
+SET(PROJECT_ROOT ${PROJECT_SOURCE_DIR})
 SET(CMAKE_C_STANDARD 11)
 
-ADD_LIBRARY(test test.h test_01 test_02 test_04.c test_05.c test_06.c test_07.c test_08.c test_09.c test_10.c test_11.c test_12.c)
+
+FILE(GLOB_RECURSE LIBRARY_SOURCE_FILES "${PROJECT_ROOT}/testfiles/*.c")
+ADD_LIBRARY(test ${LIBRARY_SOURCE_FILES})
+INCLUDE_DIRECTORIES(${PROJECT_ROOT}/testfiles/)
 
 ADD_EXECUTABLE(test_binary main)
 TARGET_LINK_LIBRARIES(test_binary test m)
