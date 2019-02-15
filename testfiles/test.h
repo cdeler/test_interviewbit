@@ -45,5 +45,6 @@ int gcd(int A, int B);
 
 char** fizzBuzz(int A, int *len1);
 
+int uniquePaths(int A, int B);
 
 #endif //TEST_01_TEST_H
