@@ -41,4 +41,6 @@ int trailingZeroes(int A);
 
 int titleToNumber(char *A);
 
+int gcd(int A, int B);
+
 #endif //TEST_01_TEST_H

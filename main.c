@@ -8,9 +8,9 @@ static void print_arr(const int *p1, size_t n1);
 
 int main()
 	{
-	char *s = "ZZZ";
+	int res = gcd(4, 6);
 
-	printf("titleToNumber(\"%s\"), is %d\n", s, titleToNumber(s));
+	printf("Result is %d\n", res);
 
 
 	return 0;
