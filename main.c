@@ -9,11 +9,10 @@ static void print_str_arr(const char **arr, int len);
 
 int main()
 	{
-	int A = 5;
+	int a = 0, n = 0, m = 1;
+	// int a = 71045970, b = 41535484, c = 64735492;
 
-	// 4; 4 * 10 + 3;  43 * 10 + 2; 432 * 10 + 1
-
-	printf("Sqrt(%d) = %d\n", A, Sqrt(A));
+	printf("powmod(%d, %d, %d) = %d\n", a, n, m, powmod(a, n, m));
 
 	return 0;
 	}

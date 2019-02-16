@@ -53,4 +53,6 @@ int reverse(int A);
 
 int Sqrt(int A);
 
+int powmod(int x, int n, int d);
+
 #endif //TEST_01_TEST_H
