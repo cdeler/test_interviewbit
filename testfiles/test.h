@@ -47,4 +47,8 @@ char** fizzBuzz(int A, int *len1);
 
 int uniquePaths(int A, int B);
 
+int isPalindrome(int A);
+
+int reverse(int A);
+
 #endif //TEST_01_TEST_H

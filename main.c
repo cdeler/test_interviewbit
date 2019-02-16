@@ -9,12 +9,11 @@ static void print_str_arr(const char **arr, int len);
 
 int main()
 	{
-	int ln = 0;
-	char **res = fizzBuzz(16, &ln);
+	int A = 1234;
 
+	// 4; 4 * 10 + 3;  43 * 10 + 2; 432 * 10 + 1
 
-	print_str_arr(res, ln);
-
+	printf("reverse(%d) = %d\n", A, reverse(A));
 
 	return 0;
 	}

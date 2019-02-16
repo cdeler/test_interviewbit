@@ -16,7 +16,7 @@ xor_swap(int *arr, int i, int j)
 	arr[i] ^= arr[j];
 	}
 
-static void reverse(int *array, int arrSize)
+static void _reverse(int *array, int arrSize)
 	{
 	int i;
 
@@ -53,7 +53,7 @@ void nextPermutation(int *A, int n1)
 
 					if (i < n1 - 1)
 						{
-						reverse(A + i, n1 - i);
+						_reverse(A + i, n1 - i);
 						}
 
 					break;
@@ -64,6 +64,6 @@ void nextPermutation(int *A, int n1)
 
 	if (!swapped)
 		{
-		reverse(A, n1);
+		_reverse(A, n1);
 		}
 	}
