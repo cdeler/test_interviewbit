@@ -9,11 +9,11 @@ static void print_str_arr(const char **arr, int len);
 
 int main()
 	{
-	int A = 1234;
+	int A = 5;
 
 	// 4; 4 * 10 + 3;  43 * 10 + 2; 432 * 10 + 1
 
-	printf("reverse(%d) = %d\n", A, reverse(A));
+	printf("Sqrt(%d) = %d\n", A, Sqrt(A));
 
 	return 0;
 	}

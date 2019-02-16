@@ -51,4 +51,6 @@ int isPalindrome(int A);
 
 int reverse(int A);
 
+int Sqrt(int A);
+
 #endif //TEST_01_TEST_H
