@@ -43,7 +43,7 @@ int titleToNumber(char *A);
 
 int gcd(int A, int B);
 
-char** fizzBuzz(int A, int *len1);
+char **fizzBuzz(int A, int *len1);
 
 int uniquePaths(int A, int B);
 
@@ -56,5 +56,7 @@ int Sqrt(int A);
 int powmod(int x, int n, int d);
 
 int searchInsert(int *A, int n1, int B);
+
+int *searchRange(const int *A, int n1, int B, int *len1);
 
 #endif //TEST_01_TEST_H

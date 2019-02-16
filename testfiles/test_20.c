@@ -2,7 +2,7 @@
 // Created by user on 2/16/19.
 //
 
-int _bsearch_internal(const int *A, int lb, int ub, const int val)
+static int _bsearch_internal(const int *A, int lb, int ub, const int val)
 	{
 	int mediana;
 	while (lb <= ub)

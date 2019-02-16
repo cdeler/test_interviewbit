@@ -10,11 +10,14 @@ static void print_str_arr(const char **arr, int len);
 
 int main()
 	{
-	int A[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, };
+	int A[] = {-1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 3, 4,};
 	int ASize = sizeof(A) / sizeof(int);
+	int resLen = -1;
 
-	int insertIdx = searchInsert(A, ASize, 152);
-	printf("insertIdx is %d\n", insertIdx);
+	int *res = searchRange(A, ASize, 4, &resLen);
+	print_arr(res, resLen);
+
+	free(res);
 
 	return 0;
 	}
