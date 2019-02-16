@@ -55,4 +55,6 @@ int Sqrt(int A);
 
 int powmod(int x, int n, int d);
 
+int searchInsert(int *A, int n1, int B);
+
 #endif //TEST_01_TEST_H

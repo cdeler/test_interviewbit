@@ -5,14 +5,16 @@
 #include "test.h"
 
 static void print_arr(const int *p1, size_t n1);
+
 static void print_str_arr(const char **arr, int len);
 
 int main()
 	{
-	int a = 0, n = 0, m = 1;
-	// int a = 71045970, b = 41535484, c = 64735492;
+	int A[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, };
+	int ASize = sizeof(A) / sizeof(int);
 
-	printf("powmod(%d, %d, %d) = %d\n", a, n, m, powmod(a, n, m));
+	int insertIdx = searchInsert(A, ASize, 152);
+	printf("insertIdx is %d\n", insertIdx);
 
 	return 0;
 	}
