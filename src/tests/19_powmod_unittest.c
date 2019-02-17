@@ -40,7 +40,7 @@ int main(int argc, char **argv)
 
 	const struct CMUnitTest tests[] =
 			{
-					cmocka_unit_test(_test01_powmod),
+					cmocka_unit_test(_test01),
 			};
 	const size_t testsCount = sizeof(tests) / sizeof(struct CMUnitTest);
 

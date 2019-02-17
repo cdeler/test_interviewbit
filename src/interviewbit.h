@@ -60,4 +60,6 @@ int searchInsert(int *A, int n1, int B);
 
 int *searchRange(const int *A, int n1, int B, int *len1);
 
+int compareVersion(char *A, char *B);
+
 #endif //TEST_01_TEST_H
