@@ -62,4 +62,6 @@ int *searchRange(const int *A, int n1, int B, int *len1);
 
 int compareVersion(char *A, char *B);
 
+char* longestCommonPrefix(char** A, int n1);
+
 #endif //TEST_01_TEST_H
