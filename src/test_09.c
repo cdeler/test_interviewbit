@@ -6,7 +6,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <assert.h>
-#include "test.h"
+#include "interviewbit.h"
 
 void print_intervals(const interval *is, int isSize)
 	{

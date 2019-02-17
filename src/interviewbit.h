@@ -5,6 +5,7 @@
 #ifndef TEST_01_TEST_H
 #define TEST_01_TEST_H
 
+#define __unused __attribute__((unused))
 // conflict with test_08
 // int *repeatedNumber(const int *A, int n1, int *len1);
 

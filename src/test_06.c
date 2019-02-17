@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-#include "test.h"
+#include "interviewbit.h"
 
 // https://www.interviewbit.com/problems/next-permutation/
 

@@ -5,7 +5,7 @@
 #include <stddef.h>
 #include <stdlib.h>
 
-#include "test.h"
+#include "interviewbit.h"
 /**
  * 		S(Act) - S(1..N) = nA - nB
  *

@@ -14,7 +14,7 @@ const int arr[] = {3, 30, 34, 5, 9};
 	free(s);
 #endif
 
-#include "test.h"
+#include "interviewbit.h"
 
 static void print_arr(const int *p1, size_t n1);
 

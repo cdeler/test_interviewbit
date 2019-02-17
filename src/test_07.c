@@ -7,7 +7,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-#include "test.h"
+#include "interviewbit.h"
 
 #define PLACEHOLDER (-1)
 #define NEUTRAL (0)

@@ -7,7 +7,7 @@
 #include <string.h>
 #include <stdbool.h>
 
-#include "test.h"
+#include "interviewbit.h"
 
 /**
  * @input A : Integer array

@@ -2,7 +2,7 @@
 #include <assert.h>
 #include <stdlib.h>
 
-#include "test.h"
+#include "interviewbit.h"
 
 static int __attribute__((always_inline))
 _get_coeff(int **arr, size_t i, size_t j)

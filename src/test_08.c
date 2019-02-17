@@ -4,7 +4,7 @@
 
 #include <stdlib.h>
 #include <stdint.h>
-#include "test.h"
+#include "interviewbit.h"
 
 #define NOT_FOUND (-1)
 
