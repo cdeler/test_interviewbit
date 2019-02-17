@@ -8,65 +8,55 @@
 #include <errno.h>
 #include <stdbool.h>
 #include <assert.h>
+#include <string.h>
 
-static char *DUMMY = "DUMMY";
+#define BUFFER_SIZE (256)
 
-static bool _get_version_part(const char *version, char **end, uint64_t *result)
+#define MAX(_a, _b) ( ((_a) < (_b)) ? (_b) : (_a) )
+#define SIGN(_x) (((_x) > 0) - ((_x) < 0))
+
+static void _get_span(char *buffer, char **pA)
 	{
-	uint64_t res = 0;
-	char *endPtr = NULL;
+	size_t len;
+	assert(pA && *pA);
+	char *A = *pA;
 
-	if (version == NULL)
+	*buffer = '\0';
+
+	while (*A == '.')
 		{
-		*result = 0;
-		*end = DUMMY;
-		return false;
+		++A;
 		}
 
-	while (*version == '.')
-		{
-		++version;
-		}
+	char *end = A;
 
-	if (*version == '\0')
-		{
-		*end = NULL;
-		*result = 0;
-		return false;
-		}
+	while (*end != '.' && *end != '\0') ++end;
 
+	len = end - A;
 
-	res = strtoull(version, &endPtr, 10);
+	assert(len < BUFFER_SIZE);
 
-	assert(errno != ERANGE);
-	
-	if (errno == EINVAL)
-		{
-		*result = 0;
-		*end = DUMMY;
-		return false;
-		}
-
-	*result = res;
-	*end = endPtr;
-	return true;
+	memmove(buffer, A, len);
+	buffer[len] = '\0';
+	*pA = end;
 	}
 
-static bool _is_zero_ending(char *ending)
+static void _zfill(char *buffer, size_t buffer_size, size_t expected_size)
 	{
-	bool res;
-	uint64_t x = 0;
-	char *ptrEnding = ending;
+	size_t diff, i;
+	assert(expected_size < BUFFER_SIZE);
 
-	while (x == 0)
+	if (buffer_size < expected_size)
 		{
-		res = _get_version_part(ptrEnding, &ptrEnding, &x);
+		diff = expected_size - buffer_size;
 
-		if (!ptrEnding)
-			return true;
+		memmove(buffer + diff, buffer, buffer_size);
+
+		for (i = 0; i < diff; ++i)
+			{
+			buffer[i] = '0';
+			}
 		}
-
-	return false;
 	}
 
 /**
@@ -77,42 +67,70 @@ static bool _is_zero_ending(char *ending)
  */
 int compareVersion(char *A, char *B)
 	{
-	uint64_t x = 0xDEADBEEF, y = 0xDEADBEEF;
-	bool conv_x, conv_y;
-	char *ptrA = A, *ptrB = B;
+	static char x[BUFFER_SIZE], y[BUFFER_SIZE];
+	size_t x_len, y_len, max_len;
+	char *ptr;
+	int res;
 
 	for (;;)
 		{
-		conv_x = _get_version_part(ptrA, &ptrA, &x);
-		conv_y = _get_version_part(ptrB, &ptrB, &y);
+		*x = *y = 0;
+		_get_span(x, &A);
+		_get_span(y, &B);
 
-		if (!conv_x && !conv_y)
+		if (!*x && !*y)
+			{
 			return 0;
-
-		if (!conv_x && conv_y)
-			{
-			if ((y == 0) && _is_zero_ending(ptrB))
-				{
-				return 0;
-				}
-			return -1;
 			}
 
-		if (conv_x && !conv_y)
+		if (*x && *y)
 			{
-			if ((x == 0) && _is_zero_ending(ptrA))
-				{
-				return 0;
-				}
+			x_len = strlen(x);
+			y_len = strlen(y);
 
-			return 1;
+			max_len = MAX(x_len, y_len);
+
+			_zfill(x, x_len, max_len);
+			_zfill(y, y_len, max_len);
+
+			if ((res = strcmp(x, y)) != 0)
+				{
+				return SIGN(res);
+				}
 			}
 
-		if (x < y)
-			return -1;
+		if (*x && !*y)
+			{
+			ptr = x;
 
-		if (x > y)
-			return 1;
+			while (*ptr)
+				{
+				if (*ptr != '.' && *ptr != '0')
+					{
+					return 1;
+					}
 
+				++ptr;
+				}
+
+			return 0;
+			}
+
+		if (!*x && *y)
+			{
+			ptr = y;
+
+			while (*ptr)
+				{
+				if (*ptr != '.' && *ptr != '0')
+					{
+					return -1;
+					}
+
+				++ptr;
+				}
+
+			return 0;
+			}
 		}
 	}
