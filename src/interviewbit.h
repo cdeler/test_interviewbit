@@ -64,4 +64,6 @@ int compareVersion(char *A, char *B);
 
 char* longestCommonPrefix(char** A, int n1);
 
+void reverseWords(char* A);
+
 #endif //TEST_01_TEST_H
