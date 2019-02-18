@@ -66,4 +66,6 @@ char* longestCommonPrefix(char** A, int n1);
 
 void reverseWords(char* A);
 
+int power(char* A);
+
 #endif //TEST_01_TEST_H
