@@ -68,4 +68,6 @@ void reverseWords(char* A);
 
 int power(char* A);
 
+double findMedianSortedArrays(const int* A, int n1, const int* B, int n2);
+
 #endif //TEST_01_TEST_H
