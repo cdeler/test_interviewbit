@@ -81,6 +81,7 @@ int nTriang(int *A, int n1)
 			if (k <= n1 && A[k-1] < sum)
 				{
 				result += (k - 1) - j;
+				result %= 1000000007;
 				}
 
 			}
