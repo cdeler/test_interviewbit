@@ -63,5 +63,5 @@ int main(int argc, char **argv)
 			};
 	const size_t testsCount = sizeof(tests) / sizeof(struct CMUnitTest);
 
-	return _cmocka_run_group_tests("test_25", tests, testsCount, NULL, NULL);
+	return _cmocka_run_group_tests("test_26", tests, testsCount, NULL, NULL);
 	}
