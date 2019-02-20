@@ -72,4 +72,6 @@ double findMedianSortedArrays(const int* A, int n1, const int* B, int n2);
 
 int removeDuplicates(int* A, int n1);
 
+int removeElement(int* A, int n1, int B);
+
 #endif //TEST_01_TEST_H
