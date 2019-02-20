@@ -30,7 +30,7 @@ struct Interval
 
 typedef struct Interval interval;
 
-interval *merge(interval *intervals, int sz, int *len);
+interval *merge1(interval *intervals, int sz, int *len);
 
 interval *get_intervals(const int *arr, size_t arrLen);
 
@@ -62,16 +62,18 @@ int *searchRange(const int *A, int n1, int B, int *len1);
 
 int compareVersion(char *A, char *B);
 
-char* longestCommonPrefix(char** A, int n1);
+char *longestCommonPrefix(char **A, int n1);
 
-void reverseWords(char* A);
+void reverseWords(char *A);
 
-int power(char* A);
+int power(char *A);
 
-double findMedianSortedArrays(const int* A, int n1, const int* B, int n2);
+double findMedianSortedArrays(const int *A, int n1, const int *B, int n2);
 
-int removeDuplicates(int* A, int n1);
+int removeDuplicates(int *A, int n1);
 
-int removeElement(int* A, int n1, int B);
+int removeElement(int *A, int n1, int B);
+
+int *merge(int *A, int n1, int *B, int n2);
 
 #endif //TEST_01_TEST_H

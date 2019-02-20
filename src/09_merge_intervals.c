@@ -79,7 +79,7 @@ static void merge_internal(interval *i1, interval *i2)
  * sz : number of entries in intervals
  * len : populate the length of returned array of intervals in len
  */
-interval *merge(interval *intervals, int sz, int *len)
+interval *merge1(interval *intervals, int sz, int *len)
 	{
 	int i;
 	qsort(intervals, (size_t) sz, sizeof(interval), _compare);
