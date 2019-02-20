@@ -76,4 +76,6 @@ int removeElement(int *A, int n1, int B);
 
 int *merge(int *A, int n1, int *B, int n2);
 
+int nTriang(int *A, int n1);
+
 #endif //TEST_01_TEST_H
