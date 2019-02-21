@@ -84,4 +84,6 @@ int singleNumber1(const int* A, int n1);
 
 int singleNumber(const int* A, int n1);
 
+int findMinXor(int* A, int n1);
+
 #endif //TEST_01_TEST_H
