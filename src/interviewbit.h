@@ -80,6 +80,8 @@ int numSetBits(unsigned int A);
 
 unsigned int reverse(unsigned int A);
 
+int singleNumber1(const int* A, int n1);
+
 int singleNumber(const int* A, int n1);
 
 #endif //TEST_01_TEST_H

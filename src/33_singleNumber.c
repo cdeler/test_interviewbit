@@ -8,7 +8,7 @@
  *
  * @Output Integer
  */
-int singleNumber(const int *A, int n1)
+int singleNumber1(const int *A, int n1)
 	{
 	int i;
 	int result = 0;
