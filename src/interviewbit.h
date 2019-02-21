@@ -79,4 +79,7 @@ int *merge(int *A, int n1, int *B, int n2);
 int numSetBits(unsigned int A);
 
 unsigned int reverse(unsigned int A);
+
+int singleNumber(const int* A, int n1);
+
 #endif //TEST_01_TEST_H
