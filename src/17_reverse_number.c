@@ -41,7 +41,7 @@ static int _reverse_internal(int A, int *depth, int *max_depth)
  *
  * @Output Integer
  */
-int reverse(int A)
+int reverse1(int A)
 	{
 	int64_t accum = 0;
 
