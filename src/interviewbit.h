@@ -50,7 +50,7 @@ int uniquePaths(int A, int B);
 
 int isPalindrome(int A);
 
-int reverse(int A);
+int reverse1(int A);
 
 int Sqrt(int A);
 
@@ -78,4 +78,5 @@ int *merge(int *A, int n1, int *B, int n2);
 
 int numSetBits(unsigned int A);
 
+unsigned int reverse(unsigned int A);
 #endif //TEST_01_TEST_H
